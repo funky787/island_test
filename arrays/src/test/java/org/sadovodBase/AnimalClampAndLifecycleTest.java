@@ -9,7 +9,7 @@ public class AnimalClampAndLifecycleTest {
     void constructor_clampsCoordinatesAndRegistersInCorrectCell() {
         Island island = new Island(2, 2);
 
-        Animal a = new ExposingAnimal(999, -5, island); // clamp -> (1,0)
+        Animal a = new ExposingAnimal(999, -5, island); 
 
         Location expected = island.getLocation(1, 0);
         assertTrue(expected.getAnimals().contains(a));
@@ -50,4 +50,5 @@ public class AnimalClampAndLifecycleTest {
         int callClampX(int x) { return clampX(x); }
         int callClampY(int y) { return clampY(y); }
     }
+
 }
